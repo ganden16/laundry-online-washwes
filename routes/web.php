@@ -12,9 +12,20 @@ use App\Http\Controllers\Auth\IndexController as AuthController;
 use App\Http\Controllers\User\OrderController;
 use App\Http\Controllers\User\UserProfileController;
 
-Route::get('/tes', fn () =>  view('tes'));
+Route::get('/akses', function () {
+	return response()->json([
+		"admin" => [
+			"email" => "admin@gmail.com",
+			"password" => "password"
+		],
+		"user" => [
+			"email" => "user@gmail.com",
+			"password" => "password"
+		]
+	]);
+});
 
-Route::get('/', fn () => view('index'));
+Route::get('/', fn() => view('index'));
 Route::get('/guest/order-detail', [OrderController::class, 'guestOrderDetail'])->name('guest.order-detail');
 
 Route::get('/login', [AuthController::class, 'loginView'])->middleware('guest')->name('login');
@@ -32,10 +43,9 @@ Route::prefix('user')->name('user.')->middleware(['auth', 'user'])->group(functi
 	Route::post('/pembayaran', [OrderController::class, 'bayar'])->name('pembayaran.store');
 	Route::get('/status-payment', [OrderController::class, 'statusPayment'])->name('pembayaran.status');
 	Route::delete('/pembayaran', [OrderController::class, 'cancel'])->name('pembayaran.cancel');
-	
+
 	Route::get('/profile', [UserProfileController::class, 'profile'])->name('profile')->middleware('auth');
 	Route::post('/users/dashboard/profile/', [UserProfileController::class, 'update'])->name('profile.update');
-
 });
 
 Route::prefix('/admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {

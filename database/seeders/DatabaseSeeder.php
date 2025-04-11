@@ -17,34 +17,35 @@ class DatabaseSeeder extends Seeder
 	{
 		User::factory()->create([
 			'nama' => 'Achmad Alvin Ardiansyah',
-			'email' => 'alvin@gmail.com',
+			'email' => 'user@gmail.com',
 			'no_telp' => '62895706077200',
 			'no_wa' => '62895706077200',
 		]);
-		User::factory()->create([
-			'nama' => 'Ahmad Thufail',
-			'email' => 'tufel@gmail.com',
-			'no_telp' => '6281323135707',
-			'no_wa' => '6281323135707',
-		]);
-		User::factory()->create([
-			'nama' => 'Daffa Cesario SafiI',
-			'email' => 'daffa@gmail.com',
-			'no_telp' => '6287881823267',
-			'no_wa' => '6287881823267',
-		]);
-		User::factory()->create([
-			'nama' => 'Faturrahman Ardiansyah',
-			'email' => 'fatur@gmail.com',
-			'no_telp' => '6281279715551',
-			'no_wa' => '6281279715551',
-		]);
-		User::factory()->create([
-			'nama' => 'Muhammad Ilham Yahya',
-			'email' => 'yahya@gmail.com',
-			'no_telp' => '6281230103784',
-			'no_wa' => '6281230103784',
-		]);
+		User::factory(10)->create();
+		// User::factory()->create([
+		// 	'nama' => 'Ahmad Thufail',
+		// 	'email' => 'tufel@gmail.com',
+		// 	'no_telp' => '6281323135707',
+		// 	'no_wa' => '6281323135707',
+		// ]);
+		// User::factory()->create([
+		// 	'nama' => 'Daffa Cesario SafiI',
+		// 	'email' => 'daffa@gmail.com',
+		// 	'no_telp' => '6287881823267',
+		// 	'no_wa' => '6287881823267',
+		// ]);
+		// User::factory()->create([
+		// 	'nama' => 'Faturrahman Ardiansyah',
+		// 	'email' => 'fatur@gmail.com',
+		// 	'no_telp' => '6281279715551',
+		// 	'no_wa' => '6281279715551',
+		// ]);
+		// User::factory()->create([
+		// 	'nama' => 'Muhammad Ilham Yahya',
+		// 	'email' => 'yahya@gmail.com',
+		// 	'no_telp' => '6281230103784',
+		// 	'no_wa' => '6281230103784',
+		// ]);
 
 		Kategori::create([
 			'nama' => 'CUCI KERING SETRIKA HEMAT',
@@ -77,6 +78,11 @@ class DatabaseSeeder extends Seeder
 		User::factory()->create([
 			'nama' => 'Joko Widodo',
 			'email' => 'jokowi@gmail.com',
+			'role' => 'admin',
+		]);
+		User::factory()->create([
+			'nama' => 'Admin Washwes',
+			'email' => 'admin@gmail.com',
 			'role' => 'admin',
 		]);
 		User::factory()->create([

@@ -71,6 +71,9 @@
 									</label>
 							  </div>
 								<div class="mb-3">
+									<a href="/akses" class="underline">Lihat Akses Login</a>
+							  </div>
+								<div class="mb-3">
 									 <button type="submit" class="btn btn-primary">Masuk</button>
 								</div>
 						  </form>

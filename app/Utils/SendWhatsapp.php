@@ -19,7 +19,7 @@ Terima kasih atas pemesanan anda di *Washwes*. Kami telah menerima pesanan laund
 
 Pesanan laundry anda saat ini sedang dalam status *_MENUNGGU_*. Kami akan segera menuju alamatmu!";
 
-		$response = Http::post('http://wa.faycook.my.id/send-message', [
+		$response = Http::post('https://wa.faycook.my.id/send-message', [
 			"api_key" => config('utils.WA_API_KEY'),
 			"sender" => config('utils.WA_SENDER'),
 			"number" => $data['no_wa'],
@@ -45,7 +45,7 @@ Kami akan segera memproses cucianmu!
 
 admin washwes by @{$data['nama_admin']}";
 
-		$response = Http::post('http://wa.faycook.my.id/send-message', [
+		$response = Http::post('https://wa.faycook.my.id/send-message', [
 			"api_key" => config('utils.WA_API_KEY'),
 			"sender" => config('utils.WA_SENDER'),
 			"number" => $data['no_wa'],
@@ -69,7 +69,7 @@ Terima kasih telah memilih layanan kami :)
 
 admin washwes by @{$data['nama_admin']}";
 
-		$response = Http::post('http://wa.faycook.my.id/send-message', [
+		$response = Http::post('https://wa.faycook.my.id/send-message', [
 			"api_key" => config('utils.WA_API_KEY'),
 			"sender" => config('utils.WA_SENDER'),
 			"number" => $data['no_wa'],
@@ -94,7 +94,7 @@ Terima kasih telah memilih layanan kami :)
 
 admin washwes by @{$data['nama_admin']}";
 
-		$response = Http::post('http://wa.faycook.my.id/send-message', [
+		$response = Http::post('https://wa.faycook.my.id/send-message', [
 			"api_key" => config('utils.WA_API_KEY'),
 			"sender" => config('utils.WA_SENDER'),
 			"number" => $data['no_wa'],
@@ -115,7 +115,7 @@ Pembayaran kamu telah kami terima dengan detail order sebagai berikut:
 
 Terimakasih telah memilih layanan kami!";
 
-		$response = Http::post('http://wa.faycook.my.id/send-message', [
+		$response = Http::post('https://wa.faycook.my.id/send-message', [
 			"api_key" => config('utils.WA_API_KEY'),
 			"sender" => config('utils.WA_SENDER'),
 			"number" => $data['no_wa'],
